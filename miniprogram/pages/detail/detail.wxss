@@ -1,0 +1,78 @@
+/* pages/detail/detail.wxss */
+.detail {
+  padding: 12px;
+}
+
+.imglist {
+  height: 200px;
+}
+
+.imgcontent {
+  width: 100%;
+  max-height: 320px;
+}
+
+.detail-title {
+  font-size: 20px;
+  font-weight: bold;
+  color: #000;
+}
+
+.house-maininfo {
+  display: flex;
+  font-size: 20px;
+  color: #f5593e;
+  margin: 8px 0 8px 0;
+  font-weight: bold;
+}
+
+.house-maininfo > div {
+  flex: 1;
+  border-right: 1px solid #e7e7e7;
+  font-weight: bold;
+  padding-left: 12px;
+}
+
+.house-maininfo > div:last-child {
+  border-right: none;
+}
+
+.house-maininfo .price {
+  padding-left: 0;
+}
+
+.house-maininfo-tips {
+  font-size: 12px;
+  color: #888;
+  display: block;
+  font-weight: normal;
+}
+
+.house-info {
+  font-size: 14px;
+  display: block;
+}
+
+.house-info-item {
+  width: 50%;
+  display: inline-block;
+  margin-bottom: 5px;
+}
+
+.house-info-lineitem {
+  width: 100%;
+}
+
+.house-info-title {
+  color: #888;
+  margin-right: 5px;
+}
+
+.house-product-title {
+  display: inline-block;
+  margin: 10px 0;
+}
+
+.house-product {
+  display: block;
+}

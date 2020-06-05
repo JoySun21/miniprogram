@@ -1,0 +1,51 @@
+<view class="container">
+  <view class="page-section">
+    <cover-view class="header">
+      <cover-view class="banner">开始寻找属于你的家</cover-view>
+      <cover-image src="../../images/banner1.jpg"/>
+    </cover-view>
+  </view>
+  <view class="page-body">
+  <button open-type="getUserInfo" bindgetuserinfo="userInfoHandler"> Click me </button>
+    <open-data type="userNickName"></open-data>
+    
+    <text class="title">猜你喜欢</text>
+
+<view wx:for="{{address}}" style='position: relative;'>
+ <!-- 列表层 -->
+ <view class='list' style='{{item.txtStyle}}' bindtouchstart="touchS" bindtouchmove="touchM" bindtouchend="touchE" data-index='{{index}}'>
+ <!-- 收货信息 -->
+ <view class='info' bindtap='select_addr' data-id="{{item.id}}">
+ <view>
+ {{item.name}} 
+ <span class="phone">{{item.phone}}</span>
+ <span wx:if="{{item.default == 1}}" class='def'>默认</span>
+ </view>
+ <view>
+ {{item.province}} {{item.address}}
+ </view>
+ </view>
+ <!-- 编辑图标 -->
+ <view class='edit' bindtap='edit' data-id='{{item.id}}' >
+ <image src='/image/edit.png'></image>
+ </view>
+ </view>
+ <!-- 删除按钮 -->
+ <view class="delete" data-id="{{item.id}}" data-index='{{index}}' bindtap="delItem" >删除</view>
+</view>
+  
+<view class='add' bindtap='add'>添加地址</view>
+    <!-- <block wx:for="{{houselist}}" wx:key="*this">
+      <view class="page-section page-item" data-id="{{index}}" bindtap="onDetail">
+        <cover-view class="page-item-image">
+          <cover-image src="../../images/example.jpg"/>
+        </cover-view>
+        <view class="page-item-info">
+          <text class="page-item-title">{{item.title}} 4室2厅 南 有一个大露台 阳光好阳光好阳光好阳光好阳光好阳光好阳光好阳光好阳光好\n</text>
+          <text class="page-item-text">4室2厅/123.45㎡/南、万科希望\n</text>
+          <text class="page-item-price">763万</text><text class="page-item-preprice">65447元/平</text>
+        </view>
+      </view>
+    </block> -->
+  </view>
+</view>

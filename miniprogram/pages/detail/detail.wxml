@@ -1,0 +1,83 @@
+<!--pages/detail/detail.wxml-->
+<view class="container">
+  <view class="page-body">
+    <view class="page-section page-section-spacing swiper">
+      <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" class="imglist">
+        <block wx:for="{{imglist}}" wx:key="*this">
+          <swiper-item>
+            <image src="../../images/{{item}}" class="imgcontent"/>
+          </swiper-item>
+        </block>
+      </swiper>
+    </view>
+    <view class="page-section detail">
+      <text class="detail-title">绿城品质 地铁改善大四房 现代轻奢 带车位</text>
+      <div class="house-maininfo">
+        <div class="price">
+          <div>510万</div>
+          <text class="house-maininfo-tips">售价</text>
+        </div>
+        <div>
+          <div>4室2厅</div>
+          <text class="house-maininfo-tips">房型</text>
+        </div>
+        <div>
+          <div>123.45㎡</div>
+          <text class="house-maininfo-tips">建筑面积</text>
+        </div>
+      </div>
+      <div class="house-info">
+        <div class="house-info-item">
+          <text class="house-info-title">单价：</text>
+          <text>390947元/平</text>
+        </div>
+        <div class="house-info-item">
+          <text class="house-info-title">挂牌：</text>
+          <text>2019.10.10</text>
+        </div>
+        <div class="house-info-item">
+          <text class="house-info-title">朝向：</text>
+          <text>南</text>
+        </div>
+        <div class="house-info-item">
+          <text class="house-info-title">楼层：</text>
+          <text>中楼层/13</text>
+        </div>
+        <div class="house-info-item">
+          <text class="house-info-title">楼型：</text>
+          <text>板楼</text>
+        </div>
+        <div class="house-info-item">
+          <text class="house-info-title">电梯：</text>
+          <text>有电梯</text>
+        </div>
+        <div class="house-info-item">
+          <text class="house-info-title">装修：</text>
+          <text>简装</text>
+        </div>
+        <div class="house-info-item">
+          <text class="house-info-title">年代：</text>
+          <text>2012年</text>
+        </div>
+        <div class="house-info-item">
+          <text class="house-info-title">用途：</text>
+          <text>普通住宅</text>
+        </div>
+        <div class="house-info-item">
+          <text class="house-info-title">权属：</text>
+          <text>商品房</text>
+        </div>
+        <div class="house-info-lineitem">
+          <text class="house-info-title">小区：</text>
+          <text>蒙卡岸</text>
+        </div>
+      </div>
+      <text class="detail-title house-product-title">房源介绍</text>
+      <text class="house-product">核心卖点 此房满两年，视野宽阔。采光充足，诚心出售看房方便。周边配套西溪欢乐城，宏丰家具城，西溪欢乐城等配套，文一西路未来科技城，海创园4.5公里</text>
+       <text class="detail-title house-product-title">房源详情</text>
+        <block wx:for="{{imglist}}" wx:key="*this">
+          <image src="../../images/{{item}}" class="imgcontent"/>
+        </block>
+    </view>
+  </view>
+</view>
